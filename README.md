@@ -9,8 +9,7 @@ Inspired by https://algs4.cs.princeton.edu/33balanced/RedBlackBST.java.html
 ## How to run
 
 - Run the file **RedBlackBST.java**
-- The program will allow you to add words to the balanced search tree in the command line.
-- Type 'exit' when you're done.
+- You can see in the output how the tree transforms and adjusts on every single input, thus making it balanced.
 
 ## Author Details
 
