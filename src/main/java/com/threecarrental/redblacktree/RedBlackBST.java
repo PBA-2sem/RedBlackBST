@@ -1,5 +1,7 @@
 package com.threecarrental.redblacktree;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.NoSuchElementException;
 import java.util.Queue;
@@ -10,10 +12,10 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
     private static final boolean RED   = true;
     private static final boolean BLACK = false;
 
-    private Node root;     // root of the BST
+    public Node root;     // root of the BST
 
     // BST helper node data type
-    private class Node {
+    public class Node {
         private Key key;           // key
         private Value val;         // associated data
         private Node left, right;  // links to left and right subtrees
@@ -71,7 +73,15 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
             int cmp = key.compareTo(x.key);
             if      (cmp < 0) x = x.left;
             else if (cmp > 0) x = x.right;
-            else              return x.val;
+            else {
+                System.out.print(x.color ? "red, " : "black, ");
+                if (x.left != null) System.out.print(" left child: " + x.left.key + ", ");
+                else System.out.print(" left child: None, ");
+                if (x.right != null) System.out.print(" right child: " + x.right.key+ ", ");
+                else System.out.print(" right child: None, ");
+                
+                return x.val;
+            }
         }
         return null;
     }
@@ -551,17 +561,20 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
 
   
     public static void main(String[] args) { 
-        RedBlackBST<String, Integer> st = new RedBlackBST<String, Integer>();
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter your inputs to the balanced tree. Type one at a time and hit enter. When you're done, type 'exit' to see the balanced tree.");
-        for (int i = 0; sc.hasNext(); i++) {
-            String key = sc.next();
-            if (key.equals("exit")) break;
-            st.put(key, i);
+        RedBlackBST<String, Integer> st = new RedBlackBST<>();
+        String[] words = new String[]{"S", "E", "A", "R", "C", "H", "E", "X", "A", "M", "P", "L", "E"};
+        for (int i = 0; i < words.length; i++) {
+            st.put(words[i], i);
+            
+            System.out.println("#####PUTTING IN " + words[i] + " with idx " + i + "############");
+            
+            for (String s : st.keys())
+                System.out.println(s + " " + st.get(s));
+            System.out.println();
+            System.out.println();
+            System.out.println();
         }
-        System.out.println();
-        for (String s : st.keys())
-            System.out.println(s + " " + st.get(s));
+        
         System.out.println();
     }
 }
