@@ -15,7 +15,7 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
     public Node root;     // root of the BST
 
     // BST helper node data type
-    public class Node {
+    private class Node {
         private Key key;           // key
         private Value val;         // associated data
         private Node left, right;  // links to left and right subtrees
