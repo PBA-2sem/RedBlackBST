@@ -1,3 +1,5 @@
+Inspired by https://algs4.cs.princeton.edu/33balanced/RedBlackBST.java.html
+
 # Assignment 3, Balanced Search Trees
 
 ## Technologies
