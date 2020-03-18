@@ -498,7 +498,10 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
     } 
 
     // are the size fields correct?
-    private boolean isSizeConsistent() { return isSizeConsistent(root); }
+    private boolean isSizeConsistent() { 
+        return isSizeConsistent(root); 
+    }
+    
     private boolean isSizeConsistent(Node x) {
         if (x == null) return true;
         if (x.size != size(x.left) + size(x.right) + 1) return false;
@@ -516,7 +519,10 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
 
     // Does the tree have no red right links, and at most one (left)
     // red links in a row on any path?
-    private boolean is23() { return is23(root); }
+    private boolean is23() { 
+        return is23(root);
+    }
+    
     private boolean is23(Node x) {
         if (x == null) return true;
         if (isRed(x.right)) return false;
