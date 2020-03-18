@@ -7,7 +7,7 @@
 ## How to run
 
 - Run the file **RedBlackBST.java**
-- The program will allow you to type strings to the balanced search tree in the command line.
+- The program will allow you to add words to the balanced search tree in the command line.
 - Type 'exit' when you're done.
 
 ## Author Details
