@@ -1,5 +1,15 @@
 # Assignment 3, Balanced Search Trees
 
+## Technologies
+
+- Java
+
+## How to run
+
+- Run the file **RedBlackBST.java**
+- The program will allow you to type strings to the balanced search tree.
+- Type 'exit' when you're done.
+
 ## Author Details
 
 **Group: Team Wing It**
