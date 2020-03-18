@@ -547,6 +547,7 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
     public static void main(String[] args) { 
         RedBlackBST<String, Integer> st = new RedBlackBST<String, Integer>();
         Scanner sc = new Scanner(System.in);
+        System.out.println("Enter your inputs to the balanced tree. Type one at a time and hit enter. When you're done, type 'exit' to see the balanced tree.");
         for (int i = 0; sc.hasNext(); i++) {
             String key = sc.next();
             if (key.equals("exit")) break;
